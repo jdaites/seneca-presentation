@@ -4,15 +4,25 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-This is a single-file HTML slide presentation titled "From Broken Bottles to $2M ARR — Josh Daiter, InVintory." It is a self-contained `presentation.html` with all CSS and JavaScript inline.
+This is a single-file HTML slide presentation titled "From Broken Bottles to $4M Revenue/yr — Josh Daiter, InVintory." It is a self-contained `index.html` with all CSS and JavaScript inline.
 
 ## Running
 
-Open `presentation.html` directly in a browser. No build step, bundler, or dev server is needed.
+Open `index.html` directly in a browser. No build step, bundler, or dev server is needed.
+
+## Deploying
+
+Hosted on GitHub Pages. To deploy changes:
+
+```bash
+git add -A && git commit -m "your message" && git push
+```
+
+Auto-deploys on push to `main`. Live at: https://jdaites.github.io/seneca-presentation/
 
 ## Architecture
 
-- **presentation.html** — the entire presentation: styles, slides, and navigation logic in one file (~890 lines). Fonts are base64-embedded in CSS `@font-face` rules, making the file very large.
+- **index.html** — the entire presentation: styles, slides, and navigation logic in one file. Fonts and images reference local files in `assets/`.
 - **assets/** — images (logos, screenshots, headshots) and trial font files (Canela Light/LightItalic OTF).
 
 ### Design system (CSS custom properties on `:root`)

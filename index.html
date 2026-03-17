@@ -666,6 +666,9 @@
       </div>
     </div>
 
+    <!-- Scale: max $3.2M, plot y:[15,210], height=195 -->
+    <!-- y = 210 - (value / 3,200,000 * 195) -->
+    <!-- 2020:210  2021:204  2022:191  2023:187  2024:165  2025:98  2026proj:27 -->
     <svg viewBox="0 0 800 250" style="width: 100%; max-height: 52vh;" xmlns="http://www.w3.org/2000/svg">
       <defs>
         <linearGradient id="areaFill" x1="0" y1="0" x2="0" y2="1">
@@ -674,49 +677,56 @@
         </linearGradient>
       </defs>
 
-      <!-- Grid lines -->
-      <line x1="80" y1="163" x2="760" y2="163" stroke="rgba(255,255,255,0.06)" stroke-width="1"/>
-      <line x1="80" y1="115" x2="760" y2="115" stroke="rgba(255,255,255,0.06)" stroke-width="1"/>
-      <line x1="80" y1="67" x2="760" y2="67" stroke="rgba(255,255,255,0.06)" stroke-width="1"/>
-      <line x1="80" y1="19" x2="760" y2="19" stroke="rgba(255,255,255,0.06)" stroke-width="1"/>
+      <!-- Grid lines: $500K(180) $1M(149) $1.5M(119) $2M(88) $2.5M(58) -->
+      <line x1="80" y1="180" x2="760" y2="180" stroke="rgba(255,255,255,0.06)" stroke-width="1"/>
+      <line x1="80" y1="149" x2="760" y2="149" stroke="rgba(255,255,255,0.06)" stroke-width="1"/>
+      <line x1="80" y1="119" x2="760" y2="119" stroke="rgba(255,255,255,0.06)" stroke-width="1"/>
+      <line x1="80" y1="88"  x2="760" y2="88"  stroke="rgba(255,255,255,0.06)" stroke-width="1"/>
+      <line x1="80" y1="58"  x2="760" y2="58"  stroke="rgba(255,255,255,0.06)" stroke-width="1"/>
 
       <!-- Y-axis labels -->
       <text x="74" y="214" text-anchor="end" fill="rgba(255,255,255,0.25)" font-size="11" font-family="Lexend Deca, sans-serif">$0</text>
-      <text x="74" y="167" text-anchor="end" fill="rgba(255,255,255,0.25)" font-size="11" font-family="Lexend Deca, sans-serif">$500K</text>
-      <text x="74" y="119" text-anchor="end" fill="rgba(255,255,255,0.25)" font-size="11" font-family="Lexend Deca, sans-serif">$1M</text>
-      <text x="74" y="71" text-anchor="end" fill="rgba(255,255,255,0.25)" font-size="11" font-family="Lexend Deca, sans-serif">$1.5M</text>
-      <text x="74" y="23" text-anchor="end" fill="rgba(255,255,255,0.25)" font-size="11" font-family="Lexend Deca, sans-serif">$2M</text>
+      <text x="74" y="184" text-anchor="end" fill="rgba(255,255,255,0.25)" font-size="11" font-family="Lexend Deca, sans-serif">$500K</text>
+      <text x="74" y="153" text-anchor="end" fill="rgba(255,255,255,0.25)" font-size="11" font-family="Lexend Deca, sans-serif">$1M</text>
+      <text x="74" y="123" text-anchor="end" fill="rgba(255,255,255,0.25)" font-size="11" font-family="Lexend Deca, sans-serif">$1.5M</text>
+      <text x="74" y="92"  text-anchor="end" fill="rgba(255,255,255,0.25)" font-size="11" font-family="Lexend Deca, sans-serif">$2M</text>
+      <text x="74" y="62"  text-anchor="end" fill="rgba(255,255,255,0.25)" font-size="11" font-family="Lexend Deca, sans-serif">$2.5M</text>
 
       <!-- "What LinkedIn shows" comparison line -->
-      <line x1="80" y1="210" x2="760" y2="13" stroke="rgba(255,255,255,0.07)" stroke-width="1.5" stroke-dasharray="6,4"/>
-      <text x="758" y="10" text-anchor="end" fill="rgba(255,255,255,0.18)" font-size="10" font-family="Lexend Deca, sans-serif">what LinkedIn shows</text>
+      <line x1="80" y1="210" x2="760" y2="20" stroke="rgba(255,255,255,0.07)" stroke-width="1.5" stroke-dasharray="6,4"/>
+      <text x="758" y="17" text-anchor="end" fill="rgba(255,255,255,0.18)" font-size="10" font-family="Lexend Deca, sans-serif">what LinkedIn shows</text>
 
       <!-- Grinding region (2020–2023) -->
       <rect x="80" y="15" width="396" height="200" fill="rgba(245,120,120,0.04)" rx="2"/>
-      <text x="278" y="30" text-anchor="middle" fill="rgba(245,120,120,0.45)" font-size="11" font-family="Lexend Deca, sans-serif" font-weight="500" letter-spacing="1">THE GRIND</text>
+      <text x="278" y="28" text-anchor="middle" fill="rgba(245,120,120,0.45)" font-size="11" font-family="Lexend Deca, sans-serif" font-weight="500" letter-spacing="1">THE GRIND</text>
 
       <!-- It clicks region (2024–2026) -->
       <rect x="476" y="15" width="284" height="200" fill="rgba(99,194,156,0.05)" rx="2"/>
-      <text x="618" y="30" text-anchor="middle" fill="rgba(99,194,156,0.5)" font-size="11" font-family="Lexend Deca, sans-serif" font-weight="500" letter-spacing="1">IT CLICKS</text>
+      <text x="618" y="112" text-anchor="middle" fill="rgba(99,194,156,0.45)" font-size="11" font-family="Lexend Deca, sans-serif" font-weight="500" letter-spacing="1">IT CLICKS</text>
 
-      <!-- Area fill -->
-      <path d="M 80,210 C 118,210 155,201 193,201 C 231,201 269,181 307,181 C 345,181 382,174 420,174 C 458,174 495,140 533,140 C 571,140 609,35 647,35 C 685,35 722,13 760,13 L 760,210 L 80,210 Z" fill="url(#areaFill)"/>
+      <!-- Area fill (solid, 2020–2025 only) -->
+      <path d="M 80,210 C 118,210 155,204 193,204 C 231,204 269,191 307,191 C 345,191 382,187 420,187 C 458,187 495,165 533,165 C 571,165 609,98 647,98 L 647,210 L 80,210 Z" fill="url(#areaFill)"/>
 
-      <!-- Line -->
-      <path d="M 80,210 C 118,210 155,201 193,201 C 231,201 269,181 307,181 C 345,181 382,174 420,174 C 458,174 495,140 533,140 C 571,140 609,35 647,35 C 685,35 722,13 760,13" fill="none" stroke="#D6AF66" stroke-width="2.5" stroke-linecap="round"/>
+      <!-- Solid line: 2020–2025 -->
+      <path d="M 80,210 C 118,210 155,204 193,204 C 231,204 269,191 307,191 C 345,191 382,187 420,187 C 458,187 495,165 533,165 C 571,165 609,98 647,98" fill="none" stroke="#D6AF66" stroke-width="2.5" stroke-linecap="round"/>
 
-      <!-- Data points -->
-      <circle cx="80" cy="210" r="4" fill="#D6AF66"/>
-      <circle cx="193" cy="201" r="4" fill="#D6AF66"/>
-      <circle cx="307" cy="181" r="4" fill="#D6AF66"/>
-      <circle cx="420" cy="174" r="4" fill="#D6AF66"/>
-      <circle cx="533" cy="140" r="4" fill="#D6AF66"/>
-      <circle cx="647" cy="35" r="4" fill="#D6AF66"/>
-      <circle cx="760" cy="13" r="4" fill="#D6AF66"/>
+      <!-- Dashed projected line: 2025–2026 -->
+      <path d="M 647,98 C 685,98 722,27 760,27" fill="none" stroke="#D6AF66" stroke-width="2" stroke-dasharray="6,4" stroke-linecap="round"/>
 
-      <!-- X-axis -->
+      <!-- Solid data points: 2020–2025 -->
+      <circle cx="80"  cy="210" r="4" fill="#D6AF66"/>
+      <circle cx="193" cy="204" r="4" fill="#D6AF66"/>
+      <circle cx="307" cy="191" r="4" fill="#D6AF66"/>
+      <circle cx="420" cy="187" r="4" fill="#D6AF66"/>
+      <circle cx="533" cy="165" r="4" fill="#D6AF66"/>
+      <circle cx="647" cy="98"  r="4" fill="#D6AF66"/>
+
+      <!-- 2026 projected point (open circle) -->
+      <circle cx="760" cy="27" r="5" fill="none" stroke="#D6AF66" stroke-width="2"/>
+
+      <!-- Axes -->
       <line x1="80" y1="210" x2="760" y2="210" stroke="rgba(255,255,255,0.12)" stroke-width="1"/>
-      <line x1="80" y1="15" x2="80" y2="210" stroke="rgba(255,255,255,0.12)" stroke-width="1"/>
+      <line x1="80" y1="15"  x2="80"  y2="210" stroke="rgba(255,255,255,0.12)" stroke-width="1"/>
 
       <!-- X-axis labels -->
       <text x="80"  y="228" text-anchor="middle" fill="rgba(255,255,255,0.4)" font-size="11" font-family="Lexend Deca, sans-serif">2020</text>
@@ -728,15 +738,15 @@
       <text x="760" y="228" text-anchor="middle" fill="rgba(255,255,255,0.4)" font-size="11" font-family="Lexend Deca, sans-serif">2026</text>
 
       <!-- Value labels -->
-      <text x="193" y="195" text-anchor="middle" fill="rgba(255,255,255,0.3)" font-size="10" font-family="Lexend Deca, sans-serif">$100K</text>
-      <text x="307" y="175" text-anchor="middle" fill="rgba(255,255,255,0.3)" font-size="10" font-family="Lexend Deca, sans-serif">$309K</text>
-      <text x="420" y="168" text-anchor="middle" fill="rgba(255,255,255,0.3)" font-size="10" font-family="Lexend Deca, sans-serif">$384K</text>
-      <text x="533" y="134" text-anchor="middle" fill="rgba(255,255,255,0.35)" font-size="10" font-family="Lexend Deca, sans-serif">$736K</text>
-      <text x="647" y="29" text-anchor="middle" fill="rgba(255,255,255,0.5)" font-size="10" font-family="Lexend Deca, sans-serif">$1.84M</text>
-      <text x="760" y="7" text-anchor="middle" fill="rgba(255,255,255,0.5)" font-size="10" font-family="Lexend Deca, sans-serif">$2.07M</text>
+      <text x="193" y="198" text-anchor="middle" fill="rgba(255,255,255,0.3)"  font-size="10" font-family="Lexend Deca, sans-serif">$100K</text>
+      <text x="307" y="202" text-anchor="middle" fill="rgba(255,255,255,0.3)"  font-size="10" font-family="Lexend Deca, sans-serif">$309K</text>
+      <text x="420" y="181" text-anchor="middle" fill="rgba(255,255,255,0.3)"  font-size="10" font-family="Lexend Deca, sans-serif">$384K</text>
+      <text x="533" y="159" text-anchor="middle" fill="rgba(255,255,255,0.35)" font-size="10" font-family="Lexend Deca, sans-serif">$736K</text>
+      <text x="647" y="91"  text-anchor="middle" fill="rgba(255,255,255,0.5)"  font-size="10" font-family="Lexend Deca, sans-serif">$1.84M</text>
+      <text x="760" y="20"  text-anchor="middle" fill="rgba(255,255,255,0.5)"  font-size="10" font-family="Lexend Deca, sans-serif">~$3M (proj.)</text>
     </svg>
 
-    <p style="font-size: 12px; color: var(--text-tertiary); margin-top: 6px;">CA$. 2026 figures through March.</p>
+    <p style="font-size: 12px; color: var(--text-tertiary); margin-top: 6px;">CA$. 2026 full-year projection.</p>
   </div>
 
   <!-- SLIDE 14: Section — What Works -->

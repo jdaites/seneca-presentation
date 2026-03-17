@@ -654,7 +654,69 @@
     </div>
   </div>
 
-  <!-- SLIDE 14: Raise from Your Users -->
+  <!-- SLIDE 14: Test Rapidly -->
+  <div class="slide slide-dark">
+    <div class="section-label">Iteration</div>
+    <h2>Test fast. Kill fast.<br><span class="gold">Keep what works.</span></h2>
+    <div style="margin-top: 40px;">
+      <!-- Illustration: test rounds flowing toward optimized -->
+      <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 40px; flex-wrap: nowrap;">
+
+        <!-- Round 1 -->
+        <div style="display: flex; flex-direction: column; gap: 8px;">
+          <div style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; padding: 10px 14px; font-size: 13px; color: var(--text-tertiary); text-align: center; text-decoration: line-through;">Test A</div>
+          <div style="background: rgba(214,175,102,0.15); border: 1px solid rgba(214,175,102,0.4); border-radius: 8px; padding: 10px 14px; font-size: 13px; color: var(--gold); text-align: center; font-weight: 500;">Test B ✓</div>
+          <div style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; padding: 10px 14px; font-size: 13px; color: var(--text-tertiary); text-align: center; text-decoration: line-through;">Test C</div>
+        </div>
+
+        <div style="font-size: 24px; color: rgba(255,255,255,0.2); flex-shrink: 0;">&#8594;</div>
+
+        <!-- Round 2 -->
+        <div style="display: flex; flex-direction: column; gap: 8px;">
+          <div style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; padding: 10px 14px; font-size: 13px; color: var(--text-tertiary); text-align: center; text-decoration: line-through;">Test D</div>
+          <div style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; padding: 10px 14px; font-size: 13px; color: var(--text-tertiary); text-align: center; text-decoration: line-through;">Test E</div>
+          <div style="background: rgba(214,175,102,0.15); border: 1px solid rgba(214,175,102,0.4); border-radius: 8px; padding: 10px 14px; font-size: 13px; color: var(--gold); text-align: center; font-weight: 500;">Test F ✓</div>
+        </div>
+
+        <div style="font-size: 24px; color: rgba(255,255,255,0.2); flex-shrink: 0;">&#8594;</div>
+
+        <!-- Round 3 -->
+        <div style="display: flex; flex-direction: column; gap: 8px;">
+          <div style="background: rgba(214,175,102,0.15); border: 1px solid rgba(214,175,102,0.4); border-radius: 8px; padding: 10px 14px; font-size: 13px; color: var(--gold); text-align: center; font-weight: 500;">Test G ✓</div>
+          <div style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; padding: 10px 14px; font-size: 13px; color: var(--text-tertiary); text-align: center; text-decoration: line-through;">Test H</div>
+          <div style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; padding: 10px 14px; font-size: 13px; color: var(--text-tertiary); text-align: center; text-decoration: line-through;">Test I</div>
+        </div>
+
+        <div style="font-size: 24px; color: rgba(255,255,255,0.2); flex-shrink: 0;">&#8594;</div>
+
+        <!-- Round 4 -->
+        <div style="display: flex; flex-direction: column; gap: 8px;">
+          <div style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; padding: 10px 14px; font-size: 13px; color: var(--text-tertiary); text-align: center; text-decoration: line-through;">Test J</div>
+          <div style="background: rgba(214,175,102,0.15); border: 1px solid rgba(214,175,102,0.4); border-radius: 8px; padding: 10px 14px; font-size: 13px; color: var(--gold); text-align: center; font-weight: 500;">Test K ✓</div>
+          <div style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; padding: 10px 14px; font-size: 13px; color: var(--text-tertiary); text-align: center; text-decoration: line-through;">Test L</div>
+        </div>
+
+        <div style="font-size: 24px; color: rgba(255,255,255,0.2); flex-shrink: 0;">&#8594;</div>
+
+        <!-- Optimized result -->
+        <div style="background: linear-gradient(135deg, rgba(214,175,102,0.2), rgba(214,175,102,0.08)); border: 2px solid var(--gold); border-radius: 16px; padding: 24px 28px; text-align: center; flex-shrink: 0;">
+          <div style="font-size: 28px; margin-bottom: 8px;">&#9733;</div>
+          <div style="font-size: 15px; color: var(--gold); font-weight: 600; letter-spacing: 1px; text-transform: uppercase;">Optimized</div>
+          <div style="font-size: 12px; color: var(--text-tertiary); margin-top: 6px;">B + F + G + K</div>
+        </div>
+
+      </div>
+
+      <p style="font-size: 20px; color: var(--text-secondary); max-width: 700px; line-height: 1.7;">
+        We run hundreds of tests a year. Most fail &mdash; that&#8217;s the point. Put out a hypothesis, measure it, keep what moves the needle, kill everything else. Repeat.
+      </p>
+      <p style="font-size: 20px; color: var(--white); font-weight: 400; margin-top: 16px; max-width: 700px; line-height: 1.7;">
+        The product you ship in year three looks nothing like what you started with. That&#8217;s not failure &mdash; that&#8217;s the process.
+      </p>
+    </div>
+  </div>
+
+  <!-- SLIDE 15: Raise from Your Users -->
   <div class="slide">
     <div class="section-label">Think outside the box</div>
     <h2>We raised from our <span class="gold">users</span>.<br><span class="dim" style="font-size: clamp(24px, 2.5vw, 38px);">Nobody does that.</span></h2>

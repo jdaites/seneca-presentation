@@ -293,6 +293,15 @@
     opacity: 0.6;
   }
 
+  /* Adapt fixed UI elements on gold slides */
+  body:has(.slide-gold.active) .slide-number,
+  body:has(.slide-gold.active) .nav-hint {
+    color: rgba(0,0,0,0.4);
+  }
+  body:has(.slide-gold.active) .progress {
+    background: rgba(0,0,0,0.25);
+  }
+
   .slide-dark { background: #0A0A0A; }
 
   .slide-gold {
